@@ -1,0 +1,96 @@
+.kanban-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.kanban-heading__title {
+  color: #2563eb;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+
+.kanban-heading__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.kanban-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.kanban-subtitle__label {
+  font-weight: 800;
+  color: #4338ca;
+}
+
+.kanban-subtitle__value {
+  color: #111827;
+  font-weight: 700;
+}
+
+.kanban-subtitle__divider {
+  color: #cbd5e1;
+}
+
+.kanban-card-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.kanban-card-company {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.02em;
+}
+
+.kanban-card-role {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #64748b;
+}
+
+.kanban-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-weight: 700;
+}
+
+.kanban-column-header span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.kanban-count {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+  border-radius: 999px;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
