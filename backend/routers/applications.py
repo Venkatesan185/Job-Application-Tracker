@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Query, HTTPException
-from backend.models import ApplicationCreate, ApplicationUpdate
-from backend.database import get_db
-from backend.auth import get_current_user
+from models import ApplicationCreate, ApplicationUpdate
+from database import get_db
+from auth import get_current_user
 import logging
 
 logger = logging.getLogger(__name__)
