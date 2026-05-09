@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Response, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from routers import applications, analytics
-from backend.auth import get_current_user
+from .routers import applications, analytics
+from .auth import get_current_user
 
 app = FastAPI(title="Job Tracker API", version="1.0.0")
 
@@ -24,7 +24,7 @@ def root():
 @app.get("/health")
 def health():
     """Health check endpoint"""
-    from backend.database import get_db
+    from .database import get_db
     try:
         db = get_db()
         result = db.table("applications").select("*").limit(1).execute()
@@ -35,7 +35,7 @@ def health():
 @app.get("/debug/test-insert")
 def test_insert():
     """Test insert to diagnose save issues"""
-    from backend.database import get_db
+    from .database import get_db
     import logging
     import uuid
     logger = logging.getLogger(__name__)
@@ -70,7 +70,7 @@ def test_insert():
 @app.get("/debug/me")
 def debug_me(user = Depends(get_current_user)):
     """Return the authenticated user, profile existence, and application count."""
-    from backend.database import get_db
+    from .database import get_db
     db = get_db()
     profile = db.table("profiles").select("*").eq("id", user.id).execute()
     applications = db.table("applications").select("id").eq("user_id", user.id).execute()
