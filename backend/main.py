@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Response, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from backend.routers import applications, analytics  # noqa: F401
+from routers import applications, analytics
 from backend.auth import get_current_user
 
 app = FastAPI(title="Job Tracker API", version="1.0.0")
