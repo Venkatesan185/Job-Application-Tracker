@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { supabase } from '../supabaseClient'
 
-const API_URL = 'http://localhost:8000'
+const API_URL = 'https://job-application-tracker-1-80dj.onrender.com'
 
 const api = axios.create({
   baseURL: API_URL,
